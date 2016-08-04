@@ -40,6 +40,9 @@
             margin-bottom: 0;
             margin:10px;
             overflow: hidden;
+
+            background:url('Content/243H.jpg') 10%;
+
         }
 
         /* Add a gray background color and some padding to the footer */
