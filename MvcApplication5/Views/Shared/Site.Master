@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MvcApplication5.Views.Shared.Site" %>
-<%@ Import System.Web.Mvc.ViewPage %>
-<%@ Import System.Web.Mvc.ViewPage<IEnumerable<MvcApplication5.account>> %>
+
+
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -91,13 +91,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">Product</a>
                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <%: Html.ActionLink("상의", "Index",new { currentFilter ="03", page =1 }) %>
-                                        </li>
-                                        <li>
-                                            <%: Html.ActionLink("하의", "Index",new { currentFilter ="04", page =1 }) %>
-                                        </li>
-                                        <li><a href="#">JavaScript</a></li>
+                                     
                                    </ul>
                     
                     </li>
@@ -120,4 +114,12 @@
     </div>
     </form>
 </body>
+    <footer class="container-fluid text-center">
+    <p>Online Store Copyright</p>
+    <form class="form-inline">
+        Get deals:
+        <input type="email" class="form-control" size="50" placeholder="Email Address">
+        <button type="button" class="btn btn-danger">Sign Up</button>
+    </form>
+</footer>
 </html>
