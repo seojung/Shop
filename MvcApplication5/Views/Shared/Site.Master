@@ -1,4 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MvcApplication5.Views.Shared.Site" %>
+<%@ Import System.Web.Mvc.ViewPage %>
+<%@ Import System.Web.Mvc.ViewPage<IEnumerable<MvcApplication5.account>> %>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -16,7 +18,7 @@
 
     </script>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">

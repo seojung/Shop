@@ -1,13 +1,10 @@
-﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<IEnumerable<MvcApplication5.account>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<html>
-<head runat="server">
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-  인덱스 페이지
-</body>
-</html>
+<h2>Index</h2>
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+</asp:Content>

@@ -12,12 +12,7 @@ namespace MvcApplication5.Controllers
     {
         private tobyEntities db = new tobyEntities();
 
-        public ActionResult shop()
-        {
-            return RedirectToAction("Index", "Shop");
-        }
-        //rwefffdsdfsfertest123123123123
-        // GET: /Home/
+
         public ActionResult Index()
         {
             return View();
