@@ -7,10 +7,10 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace System.Web.Mvc {
+namespace MvcApplication5.Views.Shared {
     
     
-    public partial class ViewMasterPage {
+    public partial class Site {
         
         /// <summary>
         /// head 컨트롤입니다.
