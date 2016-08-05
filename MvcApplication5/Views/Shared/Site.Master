@@ -25,8 +25,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+   <link rel="stylesheet" href="/Content/css/bootstrap.css">
+    <link rel="stylesheet" href="/Content/css/base.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
@@ -41,9 +41,16 @@
             margin-bottom: 0;
             margin:10px;
             overflow: hidden;
-
             background:url('Content/243H.jpg') 10%;
-
+        }
+        .panel-head {
+            background-color: black;
+            padding : 10px 15px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius:3px;
+            border-top-right-radius:3px;
+            color: #fff;
+            border-color : black;
         }
 
         /* Add a gray background color and some padding to the footer */

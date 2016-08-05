@@ -97,12 +97,7 @@
   .nav-tabs li a {
       color: #777;
   }
-  #googleMap {
-      width: 100%;
-      height: 400px;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-  }
+  
   .navbar {
       font-family: Montserrat, sans-serif;
       margin-bottom: 0;
