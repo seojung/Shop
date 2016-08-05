@@ -183,6 +183,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\243H.jpg" />
+    <Content Include="Content\css\base.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\image\243H.jpg" />
+    <Content Include="Content\image\bg01.jpg" />
+    <Content Include="Content\image\bg02.jpg" />
+    <Content Include="Content\image\bg03.jpg" />
+    <Content Include="Content\image\bg04.jpg" />
+    <Content Include="Content\image\bg05.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -274,6 +282,7 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shop\detail_goods.aspx" />
     <Content Include="Views\Shop\GoodsPage.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

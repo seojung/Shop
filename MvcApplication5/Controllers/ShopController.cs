@@ -44,5 +44,19 @@ namespace MvcApplication5.Controllers
             return PartialView("GoodsPage", model);
         }
 
+
+        public ActionResult detail_goods(String id)
+        {
+           
+            Goods goods = db.Goods.Find(id);
+            if (goods == null)
+            {
+                return HttpNotFound();
+            }
+            return View(goods);
+          
+        }
+
+
     }
 }
