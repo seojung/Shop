@@ -12,7 +12,6 @@ namespace MvcApplication5.Controllers
     {
         private tobyEntities db = new tobyEntities();
 
-
         public ActionResult Index()
         {
             return View();
