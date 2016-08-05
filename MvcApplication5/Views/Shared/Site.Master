@@ -41,7 +41,7 @@
             margin-bottom: 0;
             margin:10px;
             overflow: hidden;
-            background:url('Content/243H.jpg') 10%;
+            background:url('Content/image/243H.jpg') 10%;
         }
         .panel-head {
             background-color: black;

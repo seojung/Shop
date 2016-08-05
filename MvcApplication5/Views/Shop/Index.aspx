@@ -7,6 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="row content">
+ 
         <div  style="height:auto;">
             <% Html.RenderAction("Goods", new { model = Model });%>
         </div>
