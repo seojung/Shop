@@ -37,8 +37,8 @@
       border-color: #f1f1f1;
   }
   .carousel-inner img {
-     height: 70%;
-      width: 100%; /* Set width to 100% */
+     height: 400%;
+      width: 40%; /* Set width to 100% */
      
       
   }
@@ -237,7 +237,7 @@
 <div id="band" class="container text-center">
   <h3>THE SHOP</h3>
   <p><em>We are the fashion</em></p>
-  <p>트랜디함 과 유니크함... 왈왈왈 개소리 샵 소개 </p>
+  <p>트랜디함 과 유니크함... 왈왈왈 개소리 샵 소개</p>
   <br>
   <button class="btn btn-lg" onclick="GoShop()">Go to Shop</button>
  
