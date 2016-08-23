@@ -37,10 +37,8 @@
       border-color: #f1f1f1;
   }
   .carousel-inner img {
-     height: 400%;
-      width: 40%; /* Set width to 100% */
-     
-      
+      height: 40%;
+      width: 100%; /* Set width to 100% */
   }
   .carousel-caption h3 {
       color: #fff !important;
