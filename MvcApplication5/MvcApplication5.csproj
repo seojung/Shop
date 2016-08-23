@@ -182,7 +182,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\243H.jpg" />
     <Content Include="Content\css\base.css" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\image\243H.jpg" />
