@@ -174,7 +174,7 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
+            <li><a href="/Customer/Join">Join</a></li>
             <li><a href="#">Extras</a></li>
             <li><a href="#">Media</a></li>
           </ul>

@@ -7,6 +7,7 @@
       <Diagram DiagramId="f8fb3524c0a945f494ac305409f73799" Name="다이어그램1">
         <EntityTypeShape EntityType="tobyModel.account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="tobyModel.Goods" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tobyModel.CUSTOMER" Width="1.5" PointX="4.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

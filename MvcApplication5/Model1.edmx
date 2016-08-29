@@ -7,6 +7,7 @@
     <Schema Namespace="tobyModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="tobyModelStoreContainer">
           <EntitySet Name="account" EntityType="tobyModel.Store.account" store:Type="Tables" Schema="toby" />
+          <EntitySet Name="CUSTOMER" EntityType="tobyModel.Store.CUSTOMER" store:Type="Tables" Schema="toby" />
           <EntitySet Name="Goods" EntityType="tobyModel.Store.Goods" store:Type="Tables" Schema="toby" />
         </EntityContainer>
         <EntityType Name="account">
@@ -18,6 +19,24 @@
           <Property Name="password" Type="varchar" MaxLength="50" />
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="address" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CST_NUM" />
+          </Key>
+          <Property Name="CST_NUM" Type="int" Nullable="false" />
+          <Property Name="CST_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CST_PWD" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CST_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="CST_PHONE_A" Type="varchar" MaxLength="50" />
+          <Property Name="CST_PHONE_B" Type="varchar" MaxLength="50" />
+          <Property Name="CST_ADR" Type="varchar" MaxLength="100" />
+          <Property Name="CST_GRADE" Type="char" MaxLength="8" />
+          <Property Name="CST_EMAIL" Type="varchar" MaxLength="100" />
+          <Property Name="CST_USED" Type="int" Nullable="false" />
+          <Property Name="CST_REG_DATE" Type="date" Nullable="false" />
+          <Property Name="CST_EDT_DATE" Type="date" Nullable="false" />
+          <Property Name="SM_NUM" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Goods">
           <Key>
@@ -37,6 +56,7 @@
         <EntityContainer Name="tobyEntities" p1:LazyLoadingEnabled="true">
           <EntitySet Name="account" EntityType="tobyModel.account" />
           <EntitySet Name="Goods" EntityType="tobyModel.Goods" />
+          <EntitySet Name="CUSTOMER" EntityType="tobyModel.CUSTOMER" />
         </EntityContainer>
         <EntityType Name="account">
           <Key>
@@ -58,6 +78,24 @@
           <Property Name="price" Type="Int32" />
           <Property Type="String" Name="description" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="url" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CST_NUM" />
+          </Key>
+          <Property Type="Int32" Name="CST_NUM" Nullable="false" />
+          <Property Type="String" Name="CST_ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CST_PWD" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CST_NAME" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CST_PHONE_A" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CST_PHONE_B" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CST_ADR" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CST_GRADE" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CST_EMAIL" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CST_USED" Nullable="false" />
+          <Property Type="DateTime" Name="CST_REG_DATE" Nullable="false" />
+          <Property Type="DateTime" Name="CST_EDT_DATE" Nullable="false" />
+          <Property Type="Int32" Name="SM_NUM" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -85,6 +123,25 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMER">
+            <EntityTypeMapping TypeName="tobyModel.CUSTOMER">
+              <MappingFragment StoreEntitySet="CUSTOMER">
+                <ScalarProperty Name="SM_NUM" ColumnName="SM_NUM" />
+                <ScalarProperty Name="CST_EDT_DATE" ColumnName="CST_EDT_DATE" />
+                <ScalarProperty Name="CST_REG_DATE" ColumnName="CST_REG_DATE" />
+                <ScalarProperty Name="CST_USED" ColumnName="CST_USED" />
+                <ScalarProperty Name="CST_EMAIL" ColumnName="CST_EMAIL" />
+                <ScalarProperty Name="CST_GRADE" ColumnName="CST_GRADE" />
+                <ScalarProperty Name="CST_ADR" ColumnName="CST_ADR" />
+                <ScalarProperty Name="CST_PHONE_B" ColumnName="CST_PHONE_B" />
+                <ScalarProperty Name="CST_PHONE_A" ColumnName="CST_PHONE_A" />
+                <ScalarProperty Name="CST_NAME" ColumnName="CST_NAME" />
+                <ScalarProperty Name="CST_PWD" ColumnName="CST_PWD" />
+                <ScalarProperty Name="CST_ID" ColumnName="CST_ID" />
+                <ScalarProperty Name="CST_NUM" ColumnName="CST_NUM" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
