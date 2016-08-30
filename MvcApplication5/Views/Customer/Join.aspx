@@ -10,8 +10,9 @@
             $('#CST_PWD').addClass("form-control");
             $('#CST_NAME').addClass("form-control");
             $('#CST_EMAIL').addClass("form-control");
-
+    
             $('#CST_ID').attr("placeholder", "아이디");
+            $('#CST_PWD').attr("type", "password");
             $('#CST_PWD').attr("placeholder", "비밀번호");
             $('#CST_NAME').attr("placeholder", "사용자 이름");
             $('#CST_EMAIL').attr("placeholder", "이메일 주소");
@@ -35,7 +36,7 @@
             <div class="form-group">
               <label for="InputPassword1">비밀번호</label>
               <%: Html.EditorFor(model => model.CST_PWD )%>
-              <input type="password" class="form-control" id="InputPassword1" placeholder="비밀번호">
+          
             </div>
             <div class="form-group">
               <label for="InputPassword2">비밀번호 확인</label>

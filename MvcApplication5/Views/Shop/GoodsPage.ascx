@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<IEnumerable<MvcApplication5.Goods>>"  %>
 <script>
     function detail_goods(id) {
-        location.href = "detail_goods/"+id;
+        location.href = "/Shop/detail_goods/"+id;
     }
 </script>
 <div class="row">
