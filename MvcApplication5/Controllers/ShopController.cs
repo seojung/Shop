@@ -24,12 +24,10 @@ namespace MvcApplication5.Controllers
             {
                 products = db.Goods.OrderBy
                    (m => m.id).ToPagedList(pageIndex, pageSize);
-
                 return View(products);
             }
             else
             {
-
                 product = product.Where(s => s.type.Contains(currentFilter));
                 product = product.OrderBy(s => s.id);
                 ViewBag.CurrentFilter = currentFilter;
@@ -47,14 +45,12 @@ namespace MvcApplication5.Controllers
 
         public ActionResult detail_goods(String id)
         {
-           
             Goods goods = db.Goods.Find(id);
             if (goods == null)
             {
                 return HttpNotFound();
             }
             return View(goods);
-          
         }
 
 

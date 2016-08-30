@@ -37,10 +37,8 @@
       border-color: #f1f1f1;
   }
   .carousel-inner img {
-     height: 400%;
-      width: 40%; /* Set width to 100% */
-     
-      
+      height: 40%;
+      width: 100%; /* Set width to 100% */
   }
   .carousel-caption h3 {
       color: #fff !important;
@@ -176,7 +174,7 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Merchandise</a></li>
+            <li><a href="/Customer/Join">Join</a></li>
             <li><a href="#">Extras</a></li>
             <li><a href="#">Media</a></li>
           </ul>
