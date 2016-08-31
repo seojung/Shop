@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+*
+-->
+
+<root>
+  <codemaster id="PAGE_ALERT" desc="알림 메세지">
+    <codeform group="" id="000" value="다음 정보를 확인하여 주시기 바랍니다.\n\n[ ##### ]" english="No Input Data : #####"/>
+    <codeform group="" id="001" value="선택이 필요한 정보가 있습니다.\n\n[ ##### ]" english="No Select Data : #####"/>
+    <codeform group="" id="002" value="입력이 필요한 정보가 있습니다.\n\n[ ##### ]" english="No Input Data : #####"/>
+    <codeform group="" id="003" value="가능한 항목이 없습니다" english="Please select data."/>
+    <codeform group="" id="004" value="등록 화면입니다." english=""/>
+
+    <codeform group="" id="100" value="사용자를 확인할 수가 없습니다. " english="No User Info"/>
+    <codeform group="" id="101" value="최초 로그인 사용자 입니다." english="First User."/>
+    <codeform group="" id="102" value="90일동안 비밀번호를 변경하지 않으셨습니다." english="None Change Password."/>
+    <codeform group="" id="103" value="사용자ID 를 입력하시기 바랍니다." english="Please insert System User ID."/>
+    <codeform group="" id="104" value="사용자명을 입력하시기 바랍니다." english="Please insert System User Name."/>
+    <codeform group="" id="105" value="로그인 화면으로 이동합니다." english="Please insert System User Name."/>
+
+    <codeform group="" id="200" value="중복확인이 필요합니다." english="Please check user duplicate."/>
+    <codeform group="" id="201" value="사용 가능한 ID입니다." english="Available user ID"/>
+    <codeform group="" id="202" value="이미 사용중인 ID입니다. 다른 ID를 입력하세요" english="Already used ID. Please Insert Other ID."/>
+
+    <codeform group="" id="300" value="비밀번호를 등록하시기 바랍니다." english="None Change Password"/>
+    <codeform group="" id="301" value="아이디와 신규 비밀번호가 동일합니다." english="None Change Password"/>
+    <codeform group="" id="302" value="기존 비밀번호와 신규 비밀번호가 동일합니다." english="None Change Password"/>
+    <codeform group="" id="303" value="신규 비밀번호와 확인란이 일치하지 않습니다." english="Please check your password."/>
+    <codeform group="" id="304" value="첫글자는 영문으로 시작하며, 영문+숫자+특수문자 조합으로 8~12 자리로 입력하세요" english="None Change Password"/>
+
+    <codeform group="" id="401" value="업로드 할 파일을 선택하여 주시기 바랍니다" english="Please select Upload File"/>
+    <codeform group="" id="402" value="조회된 정보만 다운로드 가능합니다" english="Download can used to only view mode."/>
+
+    <codeform group="" id="501" value="제품구분ID를 입력하시기 바랍니다" english="Please insert Product Category ID"/>
+    <codeform group="" id="502" value="제품구분명을 입력하시기 바랍니다" english="Please insert Product Category Name"/>
+
+    <codeform group="" id="601" value="펌웨어ID를 입력하시기 바랍니다" english="Please insert Firmware ID"/>
+    <codeform group="" id="602" value="펌웨어명을 입력하시기 바랍니다" english="Please insert Firmware Name"/>
+    <codeform group="" id="603" value="펌웨어를 추가하세요" english="Please select Firmware"/>
+
+    <codeform group="" id="701" value="모델ID 를 입력하시기 바랍니다" english="Please insert Model ID"/>
+    <codeform group="" id="702" value="모델ID 를 입력하시기 바랍니다" english="Please insert Model Name"/>
+
+    <codeform group="" id="801" value="패키지ID 를 입력하시기 바랍니다" english="Please insert Package ID"/>
+    <codeform group="" id="802" value="패키지명을 입력하시기 바랍니다" english="Please insert Package Name"/>
+    <codeform group="" id="803" value="연결된 패키지 정보가 없습니다" english="Not found Conected Package"/>
+
+    <codeform group="" id="901" value="제품 ID를 입력하시기 바랍니다" english="Please insert Product ID"/>
+    <codeform group="" id="902" value="제품명을 입력하시기 바랍니다" english="Please insert Product Name"/>
+  </codemaster>
+
+  <codemaster id="PAGE_CONFIRM" desc="확인메세지">
+    <codeform group="" id="001" value="데이터를 저장하시겠습니까?" english="Do you want to save the data?"/>
+    <codeform group="" id="002" value="선택하신 항목을 삭제하시겠습니까?" english="Do you want to delete seleted data?"/>
+
+    <codeform group="" id="101" value="제품구분 정보를 삭제 하시겠습니까?" english="Do you want to delete Product Category Infomation?"/>
+
+    <codeform group="" id="201" value="펌웨어 정보를 삭제 하시겠습니까?" english="Do you want to delete Firmware Information?"/>
+
+    <codeform group="" id="301" value="모델 정보를 삭제 하시겠습니까?" english="Do you want to delete Model Information?"/>
+
+    <codeform group="" id="401" value="패키지 정보를 삭제 하시겠습니까?" english="Do you want to delete Package Information?"/>
+
+    <codeform group="" id="501" value="제품 정보를 삭제 하시겠습니까?" english="Do you want to delete Product Information?"/>
+
+    <codeform group="" id="601" value="사용자 정보를 삭제 하시겠습니까?" english="Do you want to delete User Information?"/>
+  </codemaster>
+
+  <codemaster id="PAGE_COMMON" desc="공통명">
+    <codeform group="" id="WELCOME" value="환영합니다," english="Welcome,"/>
+    <codeform group="" id="NODATA" value="조회된 데이터가 없습니다." english="No Data..."/>
+    <codeform group="" id="CORP" value="인텔리안 테크놀로지스" english="Intellian Technologies CORP"/>
+    <codeform group="" id="LOGOUT" value="로그아웃" english="Logout"/>
+    <codeform group="" id="REGIST" value="등록" english="Regist"/>
+    <codeform group="" id="SAVE" value="저장" english="Save"/>
+    <codeform group="" id="DELETE" value="삭제" english="Delete"/>
+    <codeform group="" id="CLOSE" value="닫기" english="Close"/>
+    <codeform group="" id="LIST" value="목록" english="List"/>
+    <codeform group="" id="FILE" value="파일" english="File"/>
+    <codeform group="" id="FIRMWARE" value="펌웨어" english="Firmware"/>
+    <codeform group="" id="PACKAGE" value="패키지" english="Package"/>
+    <codeform group="" id="EXCEL" value="엑셀출력" english="Print Excel"/>
+    <codeform group="" id="INFO" value="정보" english="Information"/>
+    <codeform group="" id="NAME" value="명" english="Name"/>
+    <codeform group="" id="ALL" value="전체" english="All"/>
+    <codeform group="" id="SEARCH" value="검색" english="Search"/>
+    <codeform group="" id="TARGET" value="대체" english="Target"/>
+    <codeform group="" id="SELECT" value="선택" english="Select"/>
+    <codeform group="" id="RESET" value="초기화" english="Reset"/>
+    <codeform group="" id="SIZE" value="크기" english="Size"/>
+    <codeform group="" id="APPLY" value="적용" english="Apply"/>
+    <codeform group="" id="APPLIED" value="적용여부" english="Applied"/>
+    <codeform group="" id="RELEASE" value="릴리즈" english="Release"/>
+    <codeform group="" id="EMPTY" value="없음" english="Empty"/>
+    <codeform group="" id="DOWNLOAD" value="다운로드" english="Download"/>
+    <codeform group="" id="UPLOAD" value="업로드" english="Upload"/>
+    <codeform group="" id="KEY" value="키" english="Key"/>
+    <codeform group="" id="LOG" value="로그" english="Log"/>
+    <codeform group="" id="TIME" value="시간" english="Time"/>
+    <codeform group="" id="ADDRESS" value="주소" english="Address"/>
+    <codeform group="" id="USER" value="사용자" english="User"/>
+    <codeform group="" id="ADD" value="추가" english="Add"/>
+    <codeform group="" id="PRODUCT" value="제품" english="Product"/>
+    <codeform group="" id="CATEGORY" value="구분" english="Category"/>
+    <codeform group="" id="SYSTEM" value="시스템" english="System"/>
+    <codeform group="" id="ROLE" value="권한" english="Role"/>
+    <codeform group="" id="PASSWORD" value="암호" english="Password"/>
+
+    <codeform group="" id="MENU_0001" value="제품구분 관리" english="Category Management"/>
+    <codeform group="" id="MENU_0002" value="적용모델 관리" english="Model Management"/>
+    <codeform group="" id="MENU_0003" value="펌웨어 관리" english="Firmware Management"/>
+    <codeform group="" id="MENU_0004" value="패키지 관리" english="Package Management"/>
+    <codeform group="" id="MENU_0005" value="제품 관리" english="Product Management"/>
+    <codeform group="" id="MENU_0006" value="로그 관리" english="File Download Log"/>
+    <codeform group="" id="MENU_0007" value="사용자 관리" english="User Management"/>
+    <codeform group="" id="MENU_0008" value="앱 관리" english="App Management"/>
+
+    <codeform group="" id="FILE_0001" value="파일" english="File"/>
+    <codeform group="" id="FILE_0002" value="업로드" english="Upload"/>
+    <codeform group="" id="FILE_0003" value="최대 업로드 사이즈" english="Limited Upload Size"/>
+
+    <codeform group="" id="FIRMWARE_0001" value="펌웨어명" english="Firmware Name"/>
+    <codeform group="" id="FIRMWARE_0002" value="관련 패키지 보기" english="Package List With Firmware"/>
+
+    <codeform group="" id="MODEL_0001" value="적용모델" english="Applied Model"/>
+
+    <codeform group="" id="PACKAGE_0001" value="관련 패키지 목록 정보" english="Package List With Firmware"/>
+
+    <codeform group="" id="CATEGORY_0001" value="제품구분" english="Product Category"/>
+
+    <codeform group="" id="LOG_0001" value="시작일자" english="Start Date"/>
+    <codeform group="" id="LOG_0002" value="종료일자" english="End Date"/>
+    <codeform group="" id="LOG_0003" value="획득처" english="From"/>
+  </codemaster>
+</root>
