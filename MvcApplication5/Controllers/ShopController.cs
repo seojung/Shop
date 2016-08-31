@@ -36,6 +36,8 @@ namespace MvcApplication5.Controllers
             return View(product.ToPagedList(pageIndex, pageSize));
 
         }
+      
+
 
         public ActionResult Goods(PagedList<Goods> model)
         {
