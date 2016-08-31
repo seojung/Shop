@@ -81,7 +81,7 @@
               </div>
             </div>
             <div class="form-group text-center">
-              <button type="submit" class="btn btn-info"value="Joinus">회원가입<i class="fa fa-check spaceLeft"></i></button>
+              <button type="submit" class="btn btn-info"value="Join">회원가입<i class="fa fa-check spaceLeft"></i></button>
               <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
             </div>
         </div>
