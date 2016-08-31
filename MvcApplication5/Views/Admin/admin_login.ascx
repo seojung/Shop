@@ -3,7 +3,19 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> <!-- 부트스트랩 cdn -->
 
+<style>
+    
+    div .ul.li{
+        color :red;
+    }
 
+
+    #failed.ul{ 
+    color:red;
+font-size: 10px;
+ 
+}
+</style>
 <script>
     $(document).ready(function () {
      
@@ -25,7 +37,7 @@
   </div>
     <button type="submit" class="btn btn-default">로그인</button>
     </form>
-      <%: Html.ValidationSummary(false) %>
+      <%: Html.ValidationSummary(false,"",new {@name = "failed" ,@color = "red" } ) %>
 
 
 

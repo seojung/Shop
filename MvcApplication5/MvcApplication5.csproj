@@ -285,6 +285,7 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Admin\admin_crm.aspx" />
     <Content Include="Views\Admin\admin_login.ascx" />
     <Content Include="Views\Admin\admin_main.aspx" />
     <Content Include="Views\Admin\login_fail.aspx" />
@@ -307,6 +308,7 @@
     </Content>
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Shared\Admin.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
