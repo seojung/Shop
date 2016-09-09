@@ -38,6 +38,10 @@ public partial class tobyEntities : DbContext
 
     public DbSet<CUSTOMER> CUSTOMER { get; set; }
 
+    public DbSet<PRODUCT> PRODUCT { get; set; }
+
+    public DbSet<PRODUCT_STOCK> PRODUCT_STOCK { get; set; }
+
 }
 
 }

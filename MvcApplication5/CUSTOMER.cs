@@ -44,6 +44,10 @@ public partial class CUSTOMER
 
     public int SM_NUM { get; set; }
 
+    public System.DateTime CST_MOD_DATE { get; set; }
+
+    public string CST_MILEAGE_CD { get; set; }
+
 }
 
 }

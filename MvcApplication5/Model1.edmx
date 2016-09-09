@@ -9,6 +9,12 @@
           <EntitySet Name="account" EntityType="tobyModel.Store.account" store:Type="Tables" Schema="toby" />
           <EntitySet Name="CUSTOMER" EntityType="tobyModel.Store.CUSTOMER" store:Type="Tables" Schema="toby" />
           <EntitySet Name="Goods" EntityType="tobyModel.Store.Goods" store:Type="Tables" Schema="toby" />
+          <EntitySet Name="PRODUCT" EntityType="tobyModel.Store.PRODUCT" store:Type="Tables" Schema="toby" />
+          <EntitySet Name="PRODUCT_STOCK" EntityType="tobyModel.Store.PRODUCT_STOCK" store:Type="Tables" Schema="toby" />
+          <AssociationSet Name="PDT_ID" Association="tobyModel.Store.PDT_ID">
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+            <End Role="PRODUCT_STOCK" EntitySet="PRODUCT_STOCK" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="account">
           <Key>
@@ -24,7 +30,7 @@
           <Key>
             <PropertyRef Name="CST_NUM" />
           </Key>
-          <Property Name="CST_NUM" Type="int" Nullable="false" />
+          <Property Name="CST_NUM" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="CST_ID" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="CST_PWD" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="CST_NAME" Type="varchar" MaxLength="50" />
@@ -35,8 +41,8 @@
           <Property Name="CST_EMAIL" Type="varchar" MaxLength="100" />
           <Property Name="CST_USED" Type="int" Nullable="false" />
           <Property Name="CST_REG_DATE" Type="date" Nullable="false" />
-          <Property Name="CST_EDT_DATE" Type="date" Nullable="false" />
-          <Property Name="SM_NUM" Type="int" Nullable="false" />
+          <Property Name="CST_MOD_DATE" Type="date" Nullable="false" />
+          <Property Name="CST_MILEAGE_CD" Type="char" Nullable="false" MaxLength="3" />
         </EntityType>
         <EntityType Name="Goods">
           <Key>
@@ -49,6 +55,46 @@
           <Property Name="price" Type="int" />
           <Property Name="url" Type="varchar" MaxLength="150" />
         </EntityType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="PDT_ID" />
+          </Key>
+          <Property Name="PDT_ID" Type="int" Nullable="false" />
+          <Property Name="PDT_NAME" Type="char" MaxLength="1" />
+          <Property Name="PDT_TYPE" Type="char" MaxLength="1" />
+          <Property Name="PDT_BRAND" Type="char" MaxLength="1" />
+          <Property Name="PDT_PRICE" Type="int" />
+          <Property Name="PDT_SALES" Type="int" />
+          <Property Name="PDT_MAIN_IMG_URL" Type="varchar" MaxLength="500" />
+          <Property Name="PDT_REG_DTE" Type="date" />
+          <Property Name="PDT_REG_NUM" Type="int" />
+          <Property Name="PDT_MOD_DTE" Type="date" />
+          <Property Name="PDT_MOD_NUM" Type="int" />
+        </EntityType>
+        <EntityType Name="PRODUCT_STOCK">
+          <Key>
+            <PropertyRef Name="PDT_ID" />
+            <PropertyRef Name="PDT_SIZE" />
+          </Key>
+          <Property Name="PDT_ID" Type="int" Nullable="false" />
+          <Property Name="PDT_SIZE" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="PDT_NAME" Type="varchar" MaxLength="45" />
+          <Property Name="PDT_AMOUNT" Type="int" />
+          <Property Name="PDT_RETURN_CNT" Type="int" />
+          <Property Name="PDT_DISPRODUCT_CNT" Type="int" />
+        </EntityType>
+        <Association Name="PDT_ID">
+          <End Role="PRODUCT" Type="tobyModel.Store.PRODUCT" Multiplicity="1" />
+          <End Role="PRODUCT_STOCK" Type="tobyModel.Store.PRODUCT_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="PDT_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT_STOCK">
+              <PropertyRef Name="PDT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -57,6 +103,12 @@
           <EntitySet Name="account" EntityType="tobyModel.account" />
           <EntitySet Name="Goods" EntityType="tobyModel.Goods" />
           <EntitySet Name="CUSTOMER" EntityType="tobyModel.CUSTOMER" />
+          <EntitySet Name="PRODUCT" EntityType="tobyModel.PRODUCT" />
+          <EntitySet Name="PRODUCT_STOCK" EntityType="tobyModel.PRODUCT_STOCK" />
+          <AssociationSet Name="PDT_ID" Association="tobyModel.PDT_ID">
+            <End Role="PRODUCT" EntitySet="PRODUCT" />
+            <End Role="PRODUCT_STOCK" EntitySet="PRODUCT_STOCK" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="account">
           <Key>
@@ -96,7 +148,51 @@
           <Property Type="DateTime" Name="CST_REG_DATE" Nullable="false" />
           <Property Type="DateTime" Name="CST_EDT_DATE" Nullable="false" />
           <Property Type="Int32" Name="SM_NUM" Nullable="false" />
+          <Property Type="DateTime" Name="CST_MOD_DATE" Nullable="false" />
+          <Property Type="String" Name="CST_MILEAGE_CD" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="PRODUCT">
+          <Key>
+            <PropertyRef Name="PDT_ID" />
+          </Key>
+          <Property Type="Int32" Name="PDT_ID" Nullable="false" />
+          <Property Type="String" Name="PDT_NAME" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PDT_TYPE" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PDT_BRAND" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PDT_PRICE" />
+          <Property Type="Int32" Name="PDT_SALES" />
+          <Property Type="String" Name="PDT_MAIN_IMG_URL" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="PDT_REG_DTE" />
+          <Property Type="Int32" Name="PDT_REG_NUM" />
+          <Property Type="DateTime" Name="PDT_MOD_DTE" />
+          <Property Type="Int32" Name="PDT_MOD_NUM" />
+          <NavigationProperty Name="PRODUCT_STOCK" Relationship="tobyModel.PDT_ID" FromRole="PRODUCT" ToRole="PRODUCT_STOCK" />
+        </EntityType>
+        <EntityType Name="PRODUCT_STOCK">
+          <Key>
+            <PropertyRef Name="PDT_ID" />
+            <PropertyRef Name="PDT_SIZE" />
+          </Key>
+          <Property Type="Int32" Name="PDT_ID" Nullable="false" />
+          <Property Type="String" Name="PDT_SIZE" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PDT_NAME" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PDT_AMOUNT" />
+          <Property Type="Int32" Name="PDT_RETURN_CNT" />
+          <Property Type="Int32" Name="PDT_DISPRODUCT_CNT" />
+          <NavigationProperty Name="PRODUCT" Relationship="tobyModel.PDT_ID" FromRole="PRODUCT_STOCK" ToRole="PRODUCT" />
+        </EntityType>
+        <Association Name="PDT_ID">
+          <End Type="tobyModel.PRODUCT" Role="PRODUCT" Multiplicity="1" />
+          <End Type="tobyModel.PRODUCT_STOCK" Role="PRODUCT_STOCK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCT">
+              <PropertyRef Name="PDT_ID" />
+            </Principal>
+            <Dependent Role="PRODUCT_STOCK">
+              <PropertyRef Name="PDT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -129,8 +225,8 @@
           <EntitySetMapping Name="CUSTOMER">
             <EntityTypeMapping TypeName="tobyModel.CUSTOMER">
               <MappingFragment StoreEntitySet="CUSTOMER">
-                <ScalarProperty Name="SM_NUM" ColumnName="SM_NUM" />
-                <ScalarProperty Name="CST_EDT_DATE" ColumnName="CST_EDT_DATE" />
+                <ScalarProperty Name="CST_MILEAGE_CD" ColumnName="CST_MILEAGE_CD" />
+                <ScalarProperty Name="CST_MOD_DATE" ColumnName="CST_MOD_DATE" />
                 <ScalarProperty Name="CST_REG_DATE" ColumnName="CST_REG_DATE" />
                 <ScalarProperty Name="CST_USED" ColumnName="CST_USED" />
                 <ScalarProperty Name="CST_EMAIL" ColumnName="CST_EMAIL" />
@@ -142,6 +238,35 @@
                 <ScalarProperty Name="CST_PWD" ColumnName="CST_PWD" />
                 <ScalarProperty Name="CST_ID" ColumnName="CST_ID" />
                 <ScalarProperty Name="CST_NUM" ColumnName="CST_NUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCT">
+            <EntityTypeMapping TypeName="tobyModel.PRODUCT">
+              <MappingFragment StoreEntitySet="PRODUCT">
+                <ScalarProperty Name="PDT_MOD_NUM" ColumnName="PDT_MOD_NUM" />
+                <ScalarProperty Name="PDT_MOD_DTE" ColumnName="PDT_MOD_DTE" />
+                <ScalarProperty Name="PDT_REG_NUM" ColumnName="PDT_REG_NUM" />
+                <ScalarProperty Name="PDT_REG_DTE" ColumnName="PDT_REG_DTE" />
+                <ScalarProperty Name="PDT_MAIN_IMG_URL" ColumnName="PDT_MAIN_IMG_URL" />
+                <ScalarProperty Name="PDT_SALES" ColumnName="PDT_SALES" />
+                <ScalarProperty Name="PDT_PRICE" ColumnName="PDT_PRICE" />
+                <ScalarProperty Name="PDT_BRAND" ColumnName="PDT_BRAND" />
+                <ScalarProperty Name="PDT_TYPE" ColumnName="PDT_TYPE" />
+                <ScalarProperty Name="PDT_NAME" ColumnName="PDT_NAME" />
+                <ScalarProperty Name="PDT_ID" ColumnName="PDT_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCT_STOCK">
+            <EntityTypeMapping TypeName="tobyModel.PRODUCT_STOCK">
+              <MappingFragment StoreEntitySet="PRODUCT_STOCK">
+                <ScalarProperty Name="PDT_DISPRODUCT_CNT" ColumnName="PDT_DISPRODUCT_CNT" />
+                <ScalarProperty Name="PDT_RETURN_CNT" ColumnName="PDT_RETURN_CNT" />
+                <ScalarProperty Name="PDT_AMOUNT" ColumnName="PDT_AMOUNT" />
+                <ScalarProperty Name="PDT_NAME" ColumnName="PDT_NAME" />
+                <ScalarProperty Name="PDT_SIZE" ColumnName="PDT_SIZE" />
+                <ScalarProperty Name="PDT_ID" ColumnName="PDT_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

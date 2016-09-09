@@ -2,15 +2,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  <script>
-     var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+     //var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 
 
-        $(document).ready(function () {
-            $('#CST_ID').addClass('form-control');
+     $(document).ready(function () {
+      
+            $('#CST_ID').addClass("form-control");
             $('#CST_PWD').addClass("form-control");
             $('#CST_NAME').addClass("form-control");
             $('#CST_EMAIL').addClass("form-control");
-    
+            alert("ss?");
             $('#CST_ID').attr("placeholder", "아이디");
             $('#CST_PWD').attr("type", "password");
             $('#CST_PWD').attr("placeholder", "비밀번호");

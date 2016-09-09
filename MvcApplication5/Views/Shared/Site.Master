@@ -18,8 +18,9 @@
             });
 
             $("#btnAjax").click(function () {
+           
+                var params = $("#form1").serialize();
                 debugger;
-                var params = jQuery("#form1").serialize();
                 $.ajax({
                     url: '/Customer/Login',
                     contentType: 'application/html; charset=utf-8',

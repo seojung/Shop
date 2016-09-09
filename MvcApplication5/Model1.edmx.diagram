@@ -8,6 +8,9 @@
         <EntityTypeShape EntityType="tobyModel.account" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="tobyModel.Goods" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="tobyModel.CUSTOMER" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="tobyModel.PRODUCT" Width="1.5" PointX="6.625" PointY="1" />
+        <EntityTypeShape EntityType="tobyModel.PRODUCT_STOCK" Width="1.5" PointX="9.625" PointY="2.5" />
+        <AssociationConnector Association="tobyModel.PDT_ID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
