@@ -123,6 +123,7 @@
           <ul class="nav nav-pills nav-stacked">
            <!-- <li class="active"><a href="#section1">Dashboard</a></li>-->
             <li><a href="/Admin/admin_crm">고객관리</a></li>
+              <li><a href="/Admin/admin_ItemUpload">판매글올리기</a></li>
             <li><a href="#section3">상품관리</a></li>
             
           </ul>

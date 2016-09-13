@@ -146,8 +146,6 @@
           <Property Type="String" Name="CST_EMAIL" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Type="Int32" Name="CST_USED" Nullable="false" />
           <Property Type="DateTime" Name="CST_REG_DATE" Nullable="false" />
-          <Property Type="DateTime" Name="CST_EDT_DATE" Nullable="false" />
-          <Property Type="Int32" Name="SM_NUM" Nullable="false" />
           <Property Type="DateTime" Name="CST_MOD_DATE" Nullable="false" />
           <Property Type="String" Name="CST_MILEAGE_CD" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
         </EntityType>

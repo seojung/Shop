@@ -292,6 +292,7 @@
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Admin\admin_crm.aspx" />
+    <Content Include="Views\Admin\admin_ItemUpload.aspx" />
     <Content Include="Views\Admin\admin_login.ascx" />
     <Content Include="Views\Admin\admin_main.aspx" />
     <Content Include="Views\Admin\login_fail.aspx" />

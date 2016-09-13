@@ -35,6 +35,11 @@ namespace MvcApplication5.Controllers
             return View();
         }
 
+        public ActionResult admin_ItemUpload() {
+
+            return View();
+        }
+
 
 
         [HttpPost]
