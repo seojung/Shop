@@ -1,4 +1,4 @@
-﻿<% @ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IPagedList <MvcApplication5.Goods>>" %>
+﻿<% @ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IPagedList <MvcApplication5.Models.Goods>>" %>
 <%@ Import namespace="PagedList" %>
 <%@ Import namespace="PagedList.Mvc" %>
     

@@ -22,130 +22,196 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="stylesheet" href="/Content/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="/Content/css/style.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="/Content/css/bootstrap.css">
-    <link rel="stylesheet" href="/Content/css/base.css">
+    <link rel="stylesheet" href="/Content/css/admin_master.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <style>
 
-
-        /* Remove the navbar's default rounded borders and increase the bottom margin */
-        .navbar {
-            margin-bottom: 0px;
-            border-radius: 0;
-        }
-
-        /* Remove the jumbotron's default bottom margin */
-        .jumbotron {
-            margin-bottom: 0;
-            margin:10px;
-            overflow: hidden;
-            background:url('Content/image/243H.jpg') 10%;
-        }
-        .panel-head {
-            background-color: black;
-            padding : 10px 15px;
-            border-bottom: 1px solid transparent;
-            border-top-left-radius:3px;
-            border-top-right-radius:3px;
-            color: #fff;
-            border-color : black;
-        }
-
-        /* Add a gray background color and some padding to the footer */
-        footer {
-            background-color: #f2f2f2;
-            padding: 25px;
-        }
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        }
-
-/* Links inside the dropdown */
-        .dropdown-menu li a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-    </style>
+     </style>
 
     <title></title>
-    <asp:ContentPlaceHolder ID="head1" runat="server">
-    </asp:ContentPlaceHolder>
+
+
 
 <body>
-    <div class="jumbotron">
-        <div class="container text-center">
-            <h1>Online Store</h1>
-            <p>Mission, Vission & Values</p>
-        </div>
+    <!-- Header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-toggle"></span>
+      </button>
+      <a class="navbar-brand" href="#">Dashboard</a>
     </div>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Logo</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Product</a>
-                                   <ul class="dropdown-menu">
-                                    <%: Html.ActionLink("상의", "Index",new { currentFilter ="03", page =1 }) %>
-                                   </ul>
-                    
-                    </li>
-                    <li><a href="/#/routeTwo/6">Deals</a></li>
-                    <li><a href="/#/routeThree/9">Stores</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="col-sm-3 sidenav hidden-xs" style="height:600px;float:left" id="toggle">
-          <h2>Logo</h2>
-          <ul class="nav nav-pills nav-stacked">
-           <!-- <li class="active"><a href="#section1">Dashboard</a></li>-->
-            <li><a href="/Admin/admin_crm">고객관리</a></li>
-              <li><a href="/Admin/admin_ItemUpload">판매글올리기</a></li>
-            <li><a href="#section3">상품관리</a></li>
-            
-          </ul>
-       </div>
-       
-        <div style="height:600px;margin-left:10px; float:left;vertical-align:middle;">
-            <a id="slides" class="w3-btn-floating w3-ripple w3-teal">></a>
-        </div>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
         
-        </asp:ContentPlaceHolder>
+        <li class="dropdown">
+          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#"><i class="glyphicon glyphicon-user"></i> Admin <span class="caret"></span></a>
+          <ul id="g-account-menu" class="dropdown-menu" role="menu">
+            <li><a href="#">My Profile</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+      </ul>
     </div>
-    </form>
-</body>
-    <footer class="container-fluid text-center">
-    <p>Online Store Copyright</p>
-    <form class="form-inline">
-        Get deals:
-        <input type="email" class="form-control" size="50" placeholder="Email Address">
-        <button type="button" class="btn btn-danger">Sign Up</button>
-    </form>
-</footer>
+  </div><!-- /container -->
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+<div class="container">
+<div class="row">
+    <div class="col-md-3">
+      <!-- Left column -->
+      <a href="#"><strong><i class="glyphicon glyphicon-wrench"></i> Tools</strong></a>  
+      
+      <hr>
+      
+      <ul class="list-unstyled">
+        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">
+          <h5>Settings <i class="glyphicon glyphicon-chevron-down"></i></h5>
+          </a>
+            <ul class="list-unstyled collapse in" id="userMenu">
+                <li class="active"> <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages <span class="badge badge-info">4</span></a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Options</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> Shoutbox</a></li>
+                <li><a href="/admin/admin_crm"><i class="glyphicon glyphicon-user"></i> 고객 리스트</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-flag"></i> Transactions</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-exclamation-sign"></i> Rules</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+            </ul>
+        </li>
+        <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#menu2">
+          <h5>Reports <i class="glyphicon glyphicon-chevron-right"></i></h5>
+          </a>
+        
+            <ul class="list-unstyled collapse" id="menu2">
+                <li><a href="#">Information & Stats</a>
+                </li>
+                <li><a href="#">Views</a>
+                </li>
+                <li><a href="#">Requests</a>
+                </li>
+                <li><a href="#">Timetable</a>
+                </li>
+                <li><a href="#">Alerts</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-header">
+        <a href="#" data-toggle="collapse" data-target="#menu3">
+          <h5>Social Media <i class="glyphicon glyphicon-chevron-right"></i></h5>
+          </a>
+        
+            <ul class="list-unstyled collapse" id="menu3">
+                <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Facebook</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-circle"></i> Twitter</a></li>
+            </ul>
+        </li>
+      </ul>
+           
+      <hr>
+      
+      <a href="#"><strong><i class="glyphicon glyphicon-link"></i> Resources</strong></a>  
+      
+      <hr>
+      
+      <ul class="nav nav-pills nav-stacked">
+        <li class="nav-header"></li>
+        <li><a href="#"><i class="glyphicon glyphicon-list"></i> Layouts & Templates</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> Toolbox</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-link"></i> Widgets</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Reports</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-book"></i> Pages</a></li>
+        <li><a href="#"><i class="glyphicon glyphicon-star"></i> Social Media</a></li>
+      </ul>
+      
+      <hr>
+      <ul class="nav nav-stacked">
+        <li class="active"><a href="http://bootply.com" title="The Bootstrap Playground" target="ext">Playground</a></li>
+        <li><a href="/tagged/bootstrap-3">Bootstrap 3</a></li>
+        <li><a href="/61518" title="Bootstrap 3 Panel">Panels</a></li>
+        <li><a href="/61521" title="Bootstrap 3 Icons">Glyphicons</a></li>
+        <li><a href="/61523" title="Bootstrap 3 ListGroup">List Groups</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="/61518" title="Bootstrap 3 Slider">Carousel</a></li>
+        <li><a href="/62603">Layout</a></li>
+      </ul>
+
+      <hr>
+  	</div><!-- /col-3 -->
+    <div class="col-md-9">
+      	
+      <!-- column 2 -->	
+      <ul class="list-inline pull-right">
+         <li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-comment"></i><span class="count">3</span></a><ul class="dropdown-menu" role="menu"><li><a href="#">1. Is there a way..</a></li><li><a href="#">2. Hello, admin. I would..</a></li><li><a href="#"><strong>All messages</strong></a></li></ul></li>
+         <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
+         <li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span> Add Widget</a></li>
+      </ul>
+      <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+      
+      	<hr>
+      
+		<div class="row">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+            </asp:ContentPlaceHolder>
+            
+          
+ 
+        </div><!--/row-->
+      
+      <hr>
+      
+      <a href="#"><strong><i class="glyphicon glyphicon-comment"></i> Discussions</strong></a>  
+      
+      <hr>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-flash"></i> <small>(3 mins ago)</small> The 3rd page reports don't contain any links. Does anyone know why..</a></li>
+            <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-flash"></i> <small>(1 hour ago)</small> Hi all, I've just post a report that show the relationship betwe..</a></li>
+            <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-heart"></i> <small>(2 hrs ago)</small> Paul. That document you posted yesterday doesn't seem to contain the over..</a></li>
+            <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-heart-empty"></i> <small>(4 hrs ago)</small> The map service on c243 is down today. I will be fixing the..</a></li>
+            <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-heart"></i> <small>(yesterday)</small> I posted a new document that shows how to install the services layer..</a></li>
+            <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-flash"></i> <small>(yesterday)</small> ..</a></li>
+          </ul>
+        </div>
+      </div>
+  	</div><!--/col-span-9-->
+</div>
+</div>
+<!-- /Main -->
+
+<footer class="text-center">This Bootstrap 3 dashboard layout is compliments of <a href="http://www.bootply.com/85850"><strong>Bootply.com</strong></a></footer>
+
+<div class="modal" id="addWidgetModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title">Add Widget</h4>
+      </div>
+      <div class="modal-body">
+        <p>Add a widget stuff here..</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" data-dismiss="modal" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dalog -->
+</div><!-- /.modal -->
+
+
+
+  
+   
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<IEnumerable<MvcApplication5.Goods>>"  %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<IEnumerable<MvcApplication5.Models.Goods>>"  %>
 <script>
     function detail_goods(id) {
         location.href = "/Shop/detail_goods/"+id;

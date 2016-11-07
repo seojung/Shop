@@ -6,5 +6,3 @@
     로그인메인
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="head1" runat="server">
-</asp:Content>
